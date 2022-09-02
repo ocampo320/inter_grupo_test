@@ -1,3 +1,4 @@
+import 'package:country_app/splash_module/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
             child: Consumer<HomeProvider>(
               builder: (BuildContext context, HomeProvider provider,
                       Widget? child) =>
-                  HomeScreen(provider:provider),
+                  SplashScreen(),
             )));
   }
 }

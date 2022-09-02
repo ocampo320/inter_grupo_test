@@ -15,12 +15,13 @@ class HomeProvider extends ChangeNotifier{
     notifyListeners();
   }
 
-  void loadCountries(){
+  List<Country> loadCountries(){
     TokenServices.getToken().then((value) {
       CountryServices.getCountries(value.authToken!).then((value){
         cousntries=value;
         notifyListeners();
       });
     });
+    return cousntries;
   }
 }
